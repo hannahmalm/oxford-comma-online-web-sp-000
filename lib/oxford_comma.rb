@@ -1,5 +1,4 @@
 def oxford_comma(string)
-  
   case string.size
   when 0
     ""
