@@ -1,12 +1,13 @@
-def oxford_comma(arr)
-  case arr.size
+def oxford_comma(string)
+  
+  case string.size
   when 0
     ""
   when 1
-    arr.first
+    string.first
   when 2
-    arr.join(' and ')
+    string.join(' and ')
   else
-    [arr[0..-2].join(', '), arr.last].join(', and ')
+    [string[0..-2].join(', '), string.last].join(', and ')
   end
 end
