@@ -1,15 +1,12 @@
-def oxford_comma(array)
-  array = [*array]
-  case array.size
+def oxford_comma(arr)
+  case arr.size
   when 0
-    ''
+    ""
   when 1
-    array[0].to_s
+    arr.first
   when 2
-    array.join(' and ')
+    arr.join(' and ')
   else
-    array_copy = array
-    array_copy[-1] = "and #{array_copy[-1]}"
-    array_copy.join(', ')
+    [arr[0..-2].join(', '), arr.last].join(', and ')
   end
 end
